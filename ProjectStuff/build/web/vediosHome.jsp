@@ -61,7 +61,7 @@
 
                 </div>
                 <br>
-                Project Stuff / Videos Home 
+                Students Data Center / Videos Home 
                 <hr>
 
             </div>
@@ -83,7 +83,7 @@
                         </font>
                         <h3>
                             <a id='homeA' href="vedios.jsp?type=general">General</a><br><br>
-                            <a id='homeA' href="vedios.jsp?type=thoke">Thoke </a><br><br>
+                            <a id='homeA' href="vedios.jsp?type=movies">Movies</a><br><br>
                             <a id='homeA' href="vedios.jsp?type=snooker">Snooker</a><br><br>
 
                         </h3>
@@ -96,7 +96,8 @@
                 <small>
 
                     <i>
-                        Being Created By : Bhaskar Kalia  , CSE Final Year , NITH
+                        Under the Guidance of : Dr. Naveen Chauhan , CSED </br>
+                        Being Created By : Bhaskar Kalia  , Premlata Negi , Sushant Thakur , Nisha Kumari , Anurag Singh , CSE Final Year , NITH 
                     </i>
 
                 </small>

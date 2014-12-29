@@ -11,27 +11,6 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/WEB-INF/web.xml</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/comics.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/register.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/upload.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/META-INF/context.xml</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/papers.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/src/java/registerRequest.java</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/vedios.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/index.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/latest.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/vediosHome.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/home.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/errorPage.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/css/Project.css</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/forgotPass.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/login.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/ebooks.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/notes.jsp</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/web/contact.html</file>
-            <file>file:/home/bhaskar/Documents/programming/jsp/ProjectStuff/src/java/upload.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

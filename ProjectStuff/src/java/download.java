@@ -4,9 +4,16 @@
  * and open the template in the editor.
  */
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,21 +36,25 @@ public class download extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try (OutputStream outs = response.getOutputStream();) {
 
             //get the location of the file from the parameter loc .. and download it ..
-            
-            String location=(String)request.getParameter("loc");
-            String filename=(String)request.getParameter("name");
-            response.setContentType("APPLICATION/OCTET-STREAM");
-            response.setHeader("Content-Disposition","attachment; filename=\"" + filename + "\"");
-            java.io.FileInputStream fileInputStream=new java.io.FileInputStream(location);  
-            
-            int i;   
-            while ((i=fileInputStream.read()) != -1) {  
-            out.write(i);   
-            }   
-            fileInputStream.close();  
+            String location = (String) request.getParameter("loc");
+            String filename = (String) request.getParameter("name");
+            response.setContentLength(-1);
+            response.setContentType("application/octet-stream");
+
+             //response.setHeader("Content-Transfer-Encoding", "binary");
+            //byte[] bytes=new byte[1024];
+            response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
+            try (java.io.FileInputStream fileInputStream = new java.io.FileInputStream(location)) {
+                int i = 0;
+
+                while ((i = fileInputStream.read()) != -1) {
+                    outs.write(i);
+                }
+            }
+
         }
     }
 

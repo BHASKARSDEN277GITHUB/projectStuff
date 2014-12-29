@@ -6,11 +6,22 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+import static org.apache.tomcat.jni.User.uid;
 
 /**
  *
@@ -28,13 +39,12 @@ public class logout extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, NamingException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
             //check if some user is logged in ? if yes funckin log him out ...
             //get cookies for this domain ..
-            
             int exists = 0;
             String name = "";
             Cookie[] cookies = request.getCookies();
@@ -43,16 +53,22 @@ public class logout extends HttpServlet {
             for (i = 0; i < cookies.length; i++) {
                 cookie = cookies[i];
                 name = cookie.getName();
+
                 if (name.equals("user")) {
+                    String value = cookie.getValue();
+                    //delete cookie
+                    
                     cookie.setMaxAge(0);
                     response.addCookie(cookie);
-                    break;
+                    break ;
+                    
+                    
                 }
 
             }
-            
+
             //now redirect to login page ..
-            request.setAttribute("message","You have been logged out Successfully");
+            request.setAttribute("message", "You have been logged out Successfully");
             request.getRequestDispatcher("login.jsp").forward(request, response);
 
         }
@@ -70,7 +86,13 @@ public class logout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NamingException ex) {
+            Logger.getLogger(logout.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(logout.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -84,7 +106,13 @@ public class logout extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NamingException ex) {
+            Logger.getLogger(logout.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(logout.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

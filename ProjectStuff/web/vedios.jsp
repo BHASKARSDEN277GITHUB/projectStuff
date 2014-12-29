@@ -68,7 +68,7 @@
 
                 </div>
                 <br>
-                Project Stuff / Videos / <%=type%>
+                Students Data Center / Videos / <%=type%>
                 <hr>
 
             </div>
@@ -98,8 +98,9 @@
                                 String Location = "";
                                 if (type.equals("general")) {
                                     Location = "/media/New Volume/vedios/generalVedios"; //configure this directory path according to requirement ..
-                                } else if (type.equals("thoke")) {
-                                    Location = "/media/New Volume/vedios/thoke"; //configure this directory path according to requirement ..
+                             
+                                } else if (type.equals("movies")) {
+                                    Location = "/media/New Volume/movies"; //configure this directory path according to requirement ..
                                 } else if (type.equals("snooker")) {
                                     Location = "/media/New Volume/vedios/snooker"; //configure this directory path according to requirement ..       
                                 }
@@ -118,6 +119,7 @@
 
                                                 out.println(notes[j].getName() + "<br>");
                                                 out.println("<a id='homeA'  href='download?loc=" + notes[j] + "&name=" + notes[j].getName() + "'> " + notes[j].getName() + " </a>" + "<br><br>");
+                                                //out.println("Player Link : "+"<a id='vPlay' href='vedioPlayer.jsp?vName="+notes[j].getAbsolutePath()+"'>"+notes[j].getName()+"</a>"+"<br><br>");
                                             } else {
                                                 getFiles(notes[j].getAbsolutePath(), out);
                                             }
@@ -137,7 +139,8 @@
                 <small>
 
                     <i>
-                        Being Created By :Bhaskar Kalia , CSE Final Year , NITH
+                        Under the Guidance of : Dr. Naveen Chauhan , CSED </br>
+                        Being Created By : Bhaskar Kalia  , Premlata Negi , Sushant Thakur , Nisha Kumari , Anurag Singh , CSE Final Year , NITH 
                     </i>
 
                 </small>

@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/Project.css">
-        <title>Project Stuff</title>
+        <title>Student Data Center</title>
     </head>
     <body >
 
@@ -18,7 +18,7 @@
         <%
             //check if someone is logged in already ...
 
-            //check if some user is logged in ? if yes funckin log him out ...
+            
             //get cookies for this domain ..
             int exists = 0;
             String name = "";
@@ -29,6 +29,7 @@
                 for (i = 0; i < cookies.length; i++) {
                     cookie = cookies[i];
                     name = cookie.getName();
+                     out.println(name+"   "+cookie.getValue());
                     if (name.equals("user")) {
 
                         exists = 1;
@@ -52,7 +53,7 @@
                     <a href="contact.html"> Contact </a>
                 </div> <!-- links closed -->
 
-                <b>Project Stuff</b>
+                <b>Students Data Center</b>
                 <hr>
             </div> <!-- header started -->
 
@@ -61,15 +62,17 @@
 
                 <div id='intro'> <!-- intro started -->
 
-                    <h2><font color='green'><b>Welcome to Project Stuff</b><br></font></h2>
+                    <h2><font color='green'><b>Welcome to Students Data Center</b><br></font></h2>
                     <p>
                     <h3>
-                        This is a test Project  BEING created for fun purposes only and<br>
-                        also help the students by providing them resources such as : <br>
+                        This is the Final Year Project  BEING created for purpose of<br>
+                        helping the students by providing them resources such as : <br> 
                         NOTES,SAMPLE QUESTION PAPERS,LATEST UPDATES,EBOOKS and <br>
-                        other miscellaneous stuff .<br><br>
-                        Users can DOWNLOAD and UPLOAD stuff !<br>
-                        Contact details can be found on click at right hand corner "contact"<br>
+                        other miscellaneous stuff .<br>
+                        Users can DOWNLOAD and UPLOAD files/resources !<br><br>
+                        The project also includes the development of a single sign on server <br>
+                        to provide user authentication to other service providers<br><br>
+                        Contact details can be found on click at Top Right Hand Corner "contact"<br>
                         Thank You !<br>
                         <br><br>
 
@@ -92,7 +95,7 @@
                                     <input type="text" name="uid" width="100"><br>
 
 
-                                </td>
+                                </td> 	
                             </tr>
                             <tr>	
                                 <td>Password :</td>
@@ -122,7 +125,8 @@
             <div id='footerIndexPage'> 
                 <small>
                     <i>
-                        Being Created By : Bhaskar Kalia  , CSE Final Year , NITH
+                        Under the Guidance of : Dr. Naveen Chauhan , CSED </br>
+                        Being Created By : Bhaskar Kalia  , Premlata Negi , Sushant Thakur , Nisha Kumari , Anurag Singh , CSE Final Year , NITH 
                     </i>
                     </font>
                 </small>

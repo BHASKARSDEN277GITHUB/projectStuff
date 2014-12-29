@@ -124,7 +124,8 @@
                 <small>
 
                     <i>
-                        Being Created By : Bhaskar Kalia  , CSE Final Year , NITH
+                        Under the Guidance of : Dr. Naveen Chauhan , CSED </br>
+                        Being Created By : Bhaskar Kalia  , Premlata Negi , Sushant Thakur , Nisha Kumari , Anurag Singh , CSE Final Year , NITH 
                     </i>
 
                 </small>

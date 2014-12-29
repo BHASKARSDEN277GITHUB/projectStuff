@@ -45,7 +45,11 @@
             if (exists == 1) {
                 uid = mycookie.getValue();
             } else {
+                
+                
+                
                 //redirect to login page . With message please login again ..
+               
 
                 request.setAttribute("message", "You have been Logged out , Please Login again .");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
@@ -130,7 +134,7 @@
 
                 </div>
                     <br>
-                Project Stuff / Home 
+                Students Data Center / Home 
                 <hr>
 
             </div>
@@ -140,7 +144,7 @@
 
             <div id='subOuter'>
                 <div style="position:absolute;right:10px;">
-                    <b><a href=<%=redirectUrl%>>click here to upload files </a><br></b>
+                    <b><a href=<%=redirectUrl%> >click here to upload files </a><br></b>
                 </div>
                 <br>
                 <br>
@@ -176,7 +180,7 @@
                             <font color="green">
                             <b>MISCELLANEOUS</b><br><br></font>
                             <a id='homeA' href="vediosHome.jsp">Videos</a><br>
-                            <a id='homeA' href="comics.jsp">Comics</a><br>
+                           <!-- <a id='homeA' href="comics.jsp">Comics</a><br>-->
                         </h3>
                     </div>
 
@@ -188,7 +192,8 @@
                 <small>
 
                     <i>
-                        Being Created By : Bhaskar Kalia  , CSE Final Year , NITH
+                        Under the Guidance of : Dr. Naveen Chauhan , CSED </br>
+                        Being Created By : Bhaskar Kalia  , Premlata Negi , Sushant Thakur , Nisha Kumari , Anurag Singh , CSE Final Year , NITH 
                     </i>
 
                 </small>

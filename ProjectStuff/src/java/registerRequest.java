@@ -102,7 +102,7 @@ public class registerRequest extends HttpServlet {
                 out.println("I'll do registration now ");
                 if (uid.length()>0 && pass.length()>0  &&fName.length()>0 &&lName.length()>0 &&sq.length()>0&&sqa.length()>0 &&email.length()>0) {
                     if (pass.equals(confirmPass)) {
-
+                        out.println("I'll do registration now ");
                         //calculate the hash of password ..
                         // out.println("registered");
                         String hPass = new hashAlgo().execute(pass);
@@ -121,13 +121,14 @@ public class registerRequest extends HttpServlet {
                         
                         int rs2 = s2.executeUpdate();
                         if (rs2 != 0) {
+                           // out.println("I'll do registration now ");
                             //redirect to login page of user .
                              conn.close();
                             request.setAttribute("message", "Registration Successfull");
                             request.getRequestDispatcher("login.jsp").forward(request, response);
                         }
                         else
-                        {
+                        {   //out.println("I'll do registration now ");
                              conn.close();
                              out.println("Error in DataBase");
                         }

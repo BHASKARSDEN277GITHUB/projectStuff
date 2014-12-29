@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.Context;
@@ -43,25 +44,6 @@ public class login extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
 
             
-            //check if some user is logged in ? if yes funckin log him out ...
-            //get cookies for this domain ..
-            int exists = 0;
-            String name = "";
-            Cookie[] cookies = request.getCookies();
-            Cookie cookie = null;
-            int i; //iterator ..
-            for (i = 0; i < cookies.length; i++) {
-                cookie = cookies[i];
-                name = cookie.getName();
-                if (name.equals("user")) {
-                    cookie.setMaxAge(0);
-                    response.addCookie(cookie);
-                    break;
-                }
-
-            }
-            
-            
             //get the parameters check if details are valid .. else redirect to login page  ..
             String uid = (String) request.getParameter("uid");
             String pass = (String) request.getParameter("pass");
@@ -80,17 +62,20 @@ public class login extends HttpServlet {
                 s1.setString(1, uid);
                 ResultSet rs1 = s1.executeQuery();
                 if (rs1.next()) {
-                    String passDB = rs1.getString("hPassword");
+                    String passDB = rs1.getString("hPass"); //hPassword  changed to hPass upon database recreation . check here .
                     //get hash of current password ..
                     pass = (new hashAlgo().execute(pass)).substring(0, 8);
                     if (pass.equals(passDB)) {
-                        
+
                         //create cookie in the browser ..persistene cookie ..
-                        
-                         Cookie setcookie = new Cookie("user",uid);
-                         setcookie.setMaxAge(60*60);
-                         response.addCookie(setcookie);
+                        Cookie setcookie = new Cookie("user", uid);
+                        setcookie.setMaxAge(60 * 60);
+                        response.addCookie(setcookie);
+
                          
+                       
+                        
+                        
                         //redirect to homepage of the user ..
                         //request.setAttribute("uid", uid);
                         response.sendRedirect("home.jsp");
@@ -98,7 +83,7 @@ public class login extends HttpServlet {
                         request.setAttribute("message", "Invalid UserName and Password Combination");
                         request.getRequestDispatcher("login.jsp").forward(request, response);
                     }
-                    
+
                 } else {
                     request.setAttribute("message", "Invalid UserName and Password Combination");
                     request.getRequestDispatcher("login.jsp").forward(request, response);

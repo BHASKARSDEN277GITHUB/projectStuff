@@ -1,0 +1,8 @@
+Logout Button On demo sp's (Y) get it (Y)
+check out upload action when no file is selected (Y)
+
+
+Implementation of authentication via phone only (Y) Only one user in one browser window . check cookie's for existing login before letting second user to get authenticated 
+
+Implement Logout from the server via mobile application 
+Show upload history of the user

@@ -28,6 +28,26 @@
         <servlet-name>upload</servlet-name>
         <servlet-class>upload</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ssoLogin</servlet-name>
+        <servlet-class>ssoLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>samlResponder</servlet-name>
+        <servlet-class>samlResponder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>synchApp</servlet-name>
+        <servlet-class>synchApp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>auth</servlet-name>
+        <servlet-class>auth</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutApp</servlet-name>
+        <servlet-class>logoutApp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registerRequest</servlet-name>
         <url-pattern>/registerRequest</url-pattern>
@@ -55,6 +75,26 @@
     <servlet-mapping>
         <servlet-name>upload</servlet-name>
         <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ssoLogin</servlet-name>
+        <url-pattern>/ssoLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>samlResponder</servlet-name>
+        <url-pattern>/samlResponder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>synchApp</servlet-name>
+        <url-pattern>/synchApp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>auth</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutApp</servlet-name>
+        <url-pattern>/logoutApp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
