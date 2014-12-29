@@ -1,0 +1,130 @@
+body {
+	background-color:#092e20;
+	font:12px Verdana,sans-serif;
+}
+a {
+	text-decoration:none;
+	color:white;
+}
+#homeA{
+        text-decoration: underline;
+        color:black;
+            
+}
+table {
+	font-size:12px;
+}
+#outer {
+	position:relative;
+	min-width:100em;
+	max-width:100em;
+	margin:auto;
+	
+}
+#subOuter {
+        position:relative;
+	background:#234f32;
+        padding-bottom:10px;
+	overflow:hidden;
+}
+#subOuter1 {
+        position:relative;
+	background:whitesmoke;
+        padding-bottom:20px;
+	overflow:hidden;
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:30px;
+        
+}
+
+#contentUpload {
+        position:relative;
+	background:whitesmoke;
+        padding:10px;
+	overflow:hidden;
+}
+#contentDown {
+        position:relative;
+	background:whitesmoke;
+        padding:10px;
+	overflow:hidden;
+        text-align:center;
+        margin-left:10px;
+        margin-right:10px;
+}
+#contentUploadForm {
+        position:relative;
+	background:#234f32;
+        padding:10px;
+	overflow:hidden;
+        margin:10px;
+        padding-bottom:10px;
+}
+#vedioHomeContent{
+        position:relative;
+	background:whitesmoke;
+        padding:10px;
+	overflow:hidden;    
+}
+#header {
+	background:#092e20;
+	margin-top:20px;
+	margin-bottom:2px;
+	text-align:center;
+	font-size:40px;
+	color:white;
+}
+
+#links {
+	position:absolute;top:0px;right:10px;
+	color:white;
+	border:5px;
+	font-size:20px;
+}
+#intro {
+	position:relative;
+	float: left;
+	width: 60%;
+	background: whitesmoke;
+	color: black;
+	padding:10px;
+	margin-top:20px;
+}
+	
+#login_form {
+	position:relative;
+	margin-top:20px;
+	float:right;
+	width:30%;
+	color:white;
+}
+
+#footerIndexPage {
+	float:clear;
+	position:absolute;right:10px;
+	margin-bottom:0px;
+	color:white;
+	
+}
+#registration_form {
+    
+    position:relative;
+    color:white;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#list{
+    position:relative;
+    float:left;
+    width:30%;
+    padding-bottom: 10px;
+    margin-left:20px;
+    text-align:center;
+}
+#vPlay{
+        text-decoration: underline;
+        color:green;
+            
+}
